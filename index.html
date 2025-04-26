@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Instagram bootstrap</title>
+</head>
+<body>
+  <!--Empezamos con el nombre y la imagen de instagram-->
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <!-- Logo a la izquierda -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="imagenes/logotipo-de-instagram.png" alt="" width="30" height="24" class="me-2">
+        Instagram
+      </a>
+  
+      <!-- Botón + Dropdown a la derecha -->
+      <div class="d-flex align-items-center gap-2">
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          Create a new post
+        </button>
+  
+        <!-- Ajustes -->
+        <div class="btn-group">
+          <button type="button" class="btn btn-secondary">
+            <i class="fa-solid fa-gear"></i>
+            
+          </button>
+          <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Accessibility</a></li>
+            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" style="color:red; text-align:center;" href="#">Log out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Create a new post</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+  
+        <div class="modal-body mb-0">
+          <p><strong>Caption:</strong></p>
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 80px"></textarea>
+            <label for="floatingTextarea2">Add the caption of your post here</label>
+          </div>
+          <button type="button" class="btn btn-light mt-1"><i class="fa-solid fa-location-dot"></i></button>
+          <button type="button" class="btn btn-light mt-1"><i class="fa-solid fa-camera"></i></button>
+        </div>
+  
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success">Publish</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+        <!--voy a hacer las dos opciones para abrir el instagram con las fotos en vertical  o en cuadricula (dalta poner las lineas en negro)>--> 
+        <div class="row">
+          <div class="col-12 ">
+            <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i class="fa-solid fa-square"></i>
+            </button>
+              </li> 
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class="fa-solid fa-ellipsis-vertical"></i>
+                  
+                </button>
+              </li>
+            </ul>
+              
+            
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                <div class="container-fluid text-center m-1">
+                  <div class="row">
+                     <!--imagenes linea 1-->
+                     
+                    <div class="col-4 ">
+                      <img src="imagenes/pexels-13nuance-561463.jpg" height="450" width="590">
+                    </div>
+                    <div class="col-4">
+                      <img src="imagenes/pexels-joshsorenson-1054391.jpg" height="450" width="590">
+                    </div>
+                    <div class="col-4">
+                      <img src="imagenes/pexels-ollivves-1020017.jpg" height="450" width="590">
+                    </div>
+                  </div>
+                </div>
+                <!--preguntar para usar otra cosa para crear espacios-->
+                <br>
+                <br>
+                <br>
+                <div class="container-fluid text-center m-1">
+                  <div class="row">
+                     <!--imagenes linea 2-->
+                    <div class="col-4">
+                      <img src="imagenes/pexels-pixabay-355288.jpg" height="450" width="590">
+                    </div>
+                    <div class="col-4">
+                      <img src="imagenes/pexels-pixabay-416676.jpg" height="450" width="590">
+                    </div>
+                    <div class="col-4">
+                      <img src="imagenes/pexels-souvenirpixels-1519088.jpg" height="450" width="590">
+                    </div>
+                  </div>
+                </div>
+                 <!--preguntar para usar otra cosa para crear espacios-->
+                 <br>
+                 <br>
+                 <br>
+                <div class="container-fluid text-center m-1">
+                  <div class="row">
+                     <!--imagenes linea 3-->
+                    <div class="col-4">
+                      <img src="imagenes/pexels-thatguycraig000-1563356.jpg" height="450" width="590">
+                    </div>
+                    <div class="col-4">
+                      <img src="imagenes/pexels-therato-1933239.jpg" height="450" width="590">
+                    </div>
+                    <div class="col-4">
+                      <img src="imagenes/pexels-trupert-1032650.jpg" height="450" width="590">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade container-fluid justify-content-center d-flex flex-column " id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+
+
+
+              <!-- Contenedor para el post 1 -->
+              <div class="d-flex flex-column justify-content-center align-items-center   gap-4">
+                <div class="card w-25 w-sm-0 w-md-40 w-lg-30 border-dark shadow-sm mt-4 mb-4">
+                  
+                  <!-- Cabecera del post -->
+                  <div class="card-header d-flex justify-content-between align-items-center">
+                    <h2 class="mb-0">Water</h2>
+                    <span>12/3</span>
+                  </div>
+                  
+                  <!-- Imagen del post -->
+                  <div class="card-img-top" style="height: 300px; overflow: hidden;">
+                    <img src="imagenes/pexels-13nuance-561463.jpg" alt="water" class="img-fluid" style="object-fit: cover;width: 100%; height: 100%;">
+                  </div>
+            
+                  <!-- Descripción del post -->
+                  <div class="card-body">
+                    <p><strong>200 Likes</strong></p>
+                    <p>Que bonito es el agua con el color del sol</p>
+                  </div>
+                  
+                </div>
+              
+
+
+
+              <!-- Contenedor para el post 2 -->
+              
+                <div class="card w-25 w-sm-0 w-md-40 w-lg-30 border-dark shadow-sm mt-4 mb-4">
+                  
+                  <!-- Cabecera del post -->
+                  <div class="card-header d-flex justify-content-between align-items-center">
+                    <h2 class="mb-0">Water 2</h2>
+                    <span>13/3</span>
+                  </div>
+                  
+                  <!-- Imagen del post -->
+                  <div class="card-img-top" style="height: 300px; overflow: hidden;">
+                    <img src="imagenes/pexels-joshsorenson-1054391.jpg" alt="water" class="img-fluid" style="object-fit: cover;width: 100%; height: 100%;">
+                  </div>
+            
+                  <!-- Descripción del post -->
+                  <div class="card-body">
+                    <p><strong>220 Likes</strong></p>
+                    <p>Que bonito es el agua </p>
+                  </div>
+                  
+                </div>
+              
+            
+
+              <!-- Contenedor para el post 3 -->
+              
+                <div class="card w-25 w-sm-0 w-md-40 w-lg-30 border-dark shadow-sm mt-4 mb-4">
+                  
+                  <!-- Cabecera del post -->
+                  <div class="card-header d-flex justify-content-between align-items-center">
+                    <h2 class="mb-0">Water 3</h2>
+                    <span>15/3</span>
+                  </div>
+                  
+                  <!-- Imagen del post -->
+                  <div class="card-img-top" style="height: 300px; overflow: hidden;">
+                    <img src="imagenes/pexels-ollivves-1020017.jpg" alt="water" class="img-fluid" style="object-fit: cover;width: 100%; height: 100%;">
+                  </div>
+            
+                  <!-- Descripción del post -->
+                  <div class="card-body">
+                    <p><strong>230 Likes</strong></p>
+                    <p>Que bonito </p>
+                  </div>
+                  
+                </div>
+              
+              
+              <!-- Contenedor para el post 4-->
+              
+                <div class="card w-25 w-sm-0 w-md-40 w-lg-30 border-dark shadow-sm mt-4 mb-4">
+                  
+                  <!-- Cabecera del post -->
+                  <div class="card-header d-flex justify-content-between align-items-center">
+                    <h2 class="mb-0">Water 4</h2>
+                    <span>16/3</span>
+                  </div>
+                  
+                  <!-- Imagen del post -->
+                  <div class="card-img-top" style="height: 300px; overflow: hidden;">
+                    <img src="imagenes/pexels-pixabay-355288.jpg" alt="water" class="img-fluid" style="object-fit: cover;width: 100%; height: 100%;">
+                  </div>
+            
+                  <!-- Descripción del post -->
+                  <div class="card-body">
+                    <p><strong>201 Likes</strong></p>
+                    <p>Agua</p>
+                  </div>
+                  
+                </div>
+              
+              <!-- Contenedor para el post 5 -->
+              
+                <div class="card w-25 w-sm-0 w-md-40 w-lg-30 border-dark shadow-sm mt-4 mb-4">
+                  
+                  <!-- Cabecera del post -->
+                  <div class="card-header d-flex justify-content-between align-items-center">
+                    <h2 class="mb-0">Water 5</h2>
+                    <span>20/3</span>
+                  </div>
+                  
+                  <!-- Imagen del post -->
+                  <div class="card-img-top" style="height: 300px; overflow: hidden;">
+                    <img src="imagenes/pexels-pixabay-416676.jpg" alt="water" class="img-fluid" style="object-fit: cover;width: 100%; height: 100%;">
+                  </div>
+            
+                  <!-- Descripción del post -->
+                  <div class="card-body">
+                    <p><strong>100 Likes</strong></p>
+                    <p>Que bonito el sol</p>
+                  </div>
+                  
+                </div>
+              
+              <!-- Contenedor para el post 6 -->
+              
+                <div class="card w-25 w-sm-0 w-md-40 w-lg-30 border-dark shadow-sm mt-4 mb-4">
+                  
+                  <!-- Cabecera del post -->
+                  <div class="card-header d-flex justify-content-between align-items-center">
+                    <h2 class="mb-0">Water 6</h2>
+                    <span>22/3</span>
+                  </div>
+                  
+                  <!-- Imagen del post -->
+                  <div class="card-img-top" style="height: 300px; overflow: hidden;">
+                    <img src="imagenes/pexels-souvenirpixels-1519088.jpg" alt="water" class="img-fluid" style="object-fit: cover;width: 100%; height: 100%;">
+                  </div>
+            
+                  <!-- Descripción del post -->
+                  <div class="card-body">
+                    <p><strong>200 Likes</strong></p>
+                    <p> Color </p>
+                  </div>
+                  
+                </div>
+              
+              <!-- Contenedor para el post 7-->
+              
+                <div class="card w-25 w-sm-0 w-md-40 w-lg-30 border-dark shadow-sm mt-4 mb-4">
+                  
+                  <!-- Cabecera del post -->
+                  <div class="card-header d-flex justify-content-between align-items-center">
+                    <h2 class="mb-0">Water 7</h2>
+                    <span>24/3</span>
+                  </div>
+                  
+                  <!-- Imagen del post -->
+                  <div class="card-img-top" style="height: 300px; overflow: hidden;">
+                    <img src="imagenes/pexels-thatguycraig000-1563356.jpg" alt="water" class="img-fluid" style="object-fit: cover;width: 100%; height: 100%;">
+                  </div>
+            
+                  <!-- Descripción del post -->
+                  <div class="card-body">
+                    <p><strong>120 Likes</strong></p>
+                    <p>Sol</p>
+                  </div>
+                  
+                </div>
+              
+              <!-- Contenedor para el post 8 -->
+              
+                <div class="card w-25 w-sm-0 w-md-40 w-lg-30 border-dark shadow-sm mt-4 mb-4">
+                  
+                  <!-- Cabecera del post -->
+                  <div class="card-header d-flex justify-content-between align-items-center">
+                    <h2 class="mb-0">Water 8</h2>
+                    <span>12/4</span>
+                  </div>
+                  
+                  <!-- Imagen del post -->
+                  <div class="card-img-top" style="height: 300px; overflow: hidden;">
+                    <img src="imagenes/pexels-therato-1933239.jpg" alt="water" class="img-fluid" style="object-fit: cover;width: 100%; height: 100%;">
+                  </div>
+            
+                  <!-- Descripción del post -->
+                  <div class="card-body">
+                    <p><strong>270 Likes</strong></p>
+                    <p>Que bonito  el color del sol</p>
+                  </div>
+                  
+                </div>
+              
+              <!-- Contenedor para el post 9-->
+              
+                <div class="card w-25 w-sm-0 w-md-40 w-lg-30 border-dark shadow-sm mt-4 mb-4">
+                  
+                  <!-- Cabecera del post -->
+                  <div class="card-header d-flex justify-content-between align-items-center">
+                    <h2 class="mb-0">Water 9</h2>
+                    <span>12/5</span>
+                  </div>
+                  
+                  <!-- Imagen del post -->
+                  <div class="card-img-top" style="height: 300px; overflow: hidden;">
+                    <img src="imagenes/pexels-trupert-1032650.jpg" alt="water" class="img-fluid" style="object-fit: cover;width: 100%; height: 100%;">
+                  </div>
+            
+                  <!-- Descripción del post -->
+                  <div class="card-body">
+                    <p><strong>280 Likes</strong></p>
+                    <p>Que bonito </p>
+                  </div>
+                  
+                </div>
+              </div>
+              
+              </div>
+            </div>
+            </div>
+          
+</body>    
+          
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
+</body>
+</html>
